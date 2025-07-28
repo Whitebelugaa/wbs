@@ -3,103 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>White Beluga</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" />
+  <title>White Beluga™</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
   <style>
-    /* Quick top bar style patch */
-    .top-bar {
-      height: 48px;
-      background: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 1.5rem;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .brand-name {
-      font-weight: 600;
-      font-size: 1rem;
-      margin: 0 auto;
-    }
-
-    .connect-btn {
-      background-color: #003366;
-      color: #fff;
-      padding: 8px 14px;
-      border-radius: 20px;
-      text-decoration: none;
-      font-size: 0.875rem;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-
-    .hero h1 {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .sub {
-      font-size: 1rem;
-      color: #333;
-      margin-bottom: 1.5rem;
-    }
-
-    .cta a {
-      margin: 0 0.5rem;
-      padding: 10px 20px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .button-primary {
-      background: #003366;
-      color: #fff;
-    }
-
-    .button-secondary {
-      background: #f4f4f4;
+    body {
+      font-family: 'Playfair Display', serif;
+      background: url('villa-splash.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: #111;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 2rem;
     }
 
-    .splash img {
-      width: 100%;
-      max-width: 100%;
-      border-radius: 24px;
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
       margin-bottom: 2rem;
+      font-weight: normal;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .cta-buttons button {
+      padding: 0.75rem 1.5rem;
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-gold {
+      background-color: #d4af37;
+      color: white;
+    }
+
+    .btn-gold:hover {
+      background-color: #c1992d;
+    }
+
+    .btn-violet {
+      background-color: #6f42c1;
+      color: white;
+    }
+
+    .btn-violet:hover {
+      background-color: #5a33a1;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      .cta-buttons {
+        flex-direction: column;
+      }
+      .cta-buttons button {
+        width: 100%;
+        max-width: 300px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <!-- ✅ Slim Top Bar -->
-  <div class="top-bar">
-    <div></div> <!-- Empty left space -->
-    <div class="brand-name">White Beluga™</div>
-    <a href="#" class="connect-btn">Let’s Connect</a>
-  </div>
+  <h1>Designed to Endure | Health | Legacy Preserved</h1>
+  <h2>Legacy Secured. Reserved for the Few.</h2>
 
-  <!-- ✅ Villa Splash Image -->
-  <div class="splash">
-    <img src="villa-splash.png" alt="White Beluga™ Villa Splash" />
+  <div class="cta-buttons">
+    <button class="btn-gold">Explore the Club</button>
+    <button class="btn-violet">Step with Founder</button>
   </div>
-
-  <!-- ✅ Hero Section Restored -->
-  <section class="hero">
-    <h1>Designed to Endure | Health | Legacy Preserved</h1>
-    <p class="sub">Legacy Secured. Reserved for the Few</p>
-    <div class="cta">
-      <a href="#" class="button-primary">Explore the Club</a>
-      <a href="#" class="button-secondary">Step with Founder</a>
-    </div>
-  </section>
 </body>
 </html>
