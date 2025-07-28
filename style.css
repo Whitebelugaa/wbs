@@ -1,10 +1,91 @@
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #fdfdfd;
-    color: #111;
-    margin: 0;
-    padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fdfdfd;
+  color: #111;
+  margin: 0;
+  padding: 0;
 }
-h1 {
-    color: #003366;
+
+.splash {
+  background: #000 url('villa.jpg') center/cover no-repeat;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-text {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+.main-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  color: #003366;
+}
+
+.sub {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.button-primary, .button-secondary {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.button-primary {
+  background: #003366;
+  color: white;
+}
+
+.button-secondary {
+  background: #eee;
+  color: #003366;
+  border: 1px solid #003366;
+}
+
+.visual-block {
+  background: linear-gradient(to right, #e0f0ff, #f9fcff);
+  padding: 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.visual-block:hover {
+  transform: scale(1.02);
+}
+
+.visual-block h2 {
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.visual-block ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.8;
 }
