@@ -1,3 +1,4 @@
+/* === BASE === */
 body {
   font-family: 'Segoe UI', sans-serif;
   background: #fdfdfd;
@@ -6,6 +7,39 @@ body {
   padding: 0;
 }
 
+/* === TOP BAR === */
+.topbar {
+  height: 48px;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.topbar .brand {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #003366;
+  flex: 1;
+  text-align: center;
+}
+
+.topbar .connect-btn {
+  background-color: #003366;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* === SPLASH SECTION === */
 .splash {
   background: #000 url('villa.jpg') center/cover no-repeat;
   height: 40vh;
@@ -23,6 +57,7 @@ body {
   border-radius: 1rem;
 }
 
+/* === MAIN CONTAINER === */
 .main-container {
   padding: 2rem;
   text-align: center;
@@ -39,6 +74,7 @@ body {
   margin-bottom: 1.5rem;
 }
 
+/* === CTA Buttons === */
 .cta {
   display: flex;
   justify-content: center;
@@ -66,6 +102,7 @@ body {
   border: 1px solid #003366;
 }
 
+/* === VISUAL BLOCK === */
 .visual-block {
   background: linear-gradient(to right, #e0f0ff, #f9fcff);
   padding: 2rem;
