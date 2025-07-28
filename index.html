@@ -1,102 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>White Beluga™</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Playfair Display', serif;
-      background: url('villa-splash.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #111;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    h2 {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      font-weight: normal;
-    }
-
-    .cta-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-
-    .cta-buttons button {
-      padding: 0.75rem 1.5rem;
-      border: none;
-      font-size: 1rem;
-      font-weight: bold;
-      border-radius: 9999px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .btn-gold {
-      background-color: #d4af37;
-      color: white;
-    }
-
-    .btn-gold:hover {
-      background-color: #c1992d;
-    }
-
-    .btn-violet {
-      background-color: #6f42c1;
-      color: white;
-    }
-
-    .btn-violet:hover {
-      background-color: #5a33a1;
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 1.8rem;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>White Beluga™</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Cormorant Garamond', serif;
+        color: white;
+        overflow-x: hidden;
       }
-      .cta-buttons {
-        flex-direction: column;
-      }
-      .cta-buttons button {
+
+      .villa-bg {
+        background: url('villa-bg.png') no-repeat center center/cover;
+        height: 100vh;
         width: 100%;
-        max-width: 300px;
+        position: relative;
       }
-    }
-  </style>
-</head>
 
-<body>
-  <h1>Designed to Endure | Health | Legacy Preserved</h1>
-  <h2>Legacy Secured. Reserved for the Few.</h2>
+      .nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        backdrop-filter: blur(12px);
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 999;
+      }
 
-  <div class="cta-buttons">
-    <button class="btn-gold">Explore the Club</button>
-    <button class="btn-violet">Step with Founder</button>
-  </div>
-</body>
+      .brand {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .connect-btn {
+        padding: 0.6rem 1.2rem;
+        background: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        border-radius: 999px;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .connect-btn:hover {
+        background-color: #fff;
+        color: #000;
+      }
+
+      .hero-buttons {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .btn-gold {
+        background-color: gold;
+        color: black;
+        padding: 0.8rem 1.6rem;
+        border: none;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      .btn-violet {
+        background-color: #5A189A;
+        color: white;
+        padding: 0.8rem 1.6rem;
+        border: none;
+        font-size: 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+        .hero-buttons {
+          bottom: 8%;
+          flex-direction: column;
+        }
+
+        .brand {
+          font-size: 1.4rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="villa-bg">
+      <div class="nav">
+        <div class="brand" onclick="location.href='index.html'">White Beluga™</div>
+        <button class="connect-btn" onclick="openConnectForm()">Let's Connect</button>
+      </div>
+
+      <div class="hero-buttons">
+        <button class="btn-gold">Explore the Club</button>
+        <button class="btn-violet">Step with Founder</button>
+      </div>
+    </div>
+
+    <!-- Contact Drawer Placeholder -->
+    <div id="connect-form" style="display:none; position:fixed; top:0; right:0; height:100%; width:300px; background:#fff; color:#000; z-index:1000; box-shadow: -4px 0 10px rgba(0,0,0,0.2); padding:2rem;">
+      <h2>Connect with Us</h2>
+      <form>
+        <label>Name</label>
+        <input type="text" style="width:100%; padding:0.5rem; margin-bottom:1rem;" />
+        <label>Email</label>
+        <input type="email" style="width:100%; padding:0.5rem; margin-bottom:1rem;" />
+        <label>Message</label>
+        <textarea style="width:100%; padding:0.5rem; height:100px;"></textarea>
+        <button type="submit" style="margin-top:1rem; padding:0.6rem 1rem; background:black; color:white; border:none;">Send</button>
+      </form>
+    </div>
+
+    <script>
+      function openConnectForm() {
+        const form = document.getElementById('connect-form');
+        form.style.display = form.style.display === 'none' ? 'block' : 'none';
+      }
+    </script>
+  </body>
 </html>
